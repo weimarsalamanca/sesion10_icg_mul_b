@@ -1,2 +1,41 @@
-[InternetShortcut]
-URL=https://www.w3schools.com/code/tryit.asp?filename=GV4X39K1MK67
+<html>
+<head>
+<meta charset="utf-8"/>
+<script type="application/javascript">
+function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+    var rectangle = new Path2D();
+    //De esta forma se llama el color por su nombre 
+    
+    ctx.fillStyle = 'green';
+   ctx.fillRect(200, 100, 300, 80)
+  
+
+    var circle = new Path2D();
+  
+    
+    var ctx = document.getElementById('canvas').getContext('2d');
+  ctx.beginPath();
+  
+  //EN este modo se llama el color en base a su codigo 
+   ctx.fillStyle = '#978014';
+  ctx.arc(130, 300, 130, 0, Math.PI * 2, true);
+
+  ctx.fill('evenodd');
+     
+     
+
+    ctx.stroke(rectangle);
+    ctx.fill(circle);
+  }
+}
+
+</script>
+</head>
+<body onload="draw();">
+<canvas id="canvas" width="600" height="500"></canvas>
+</body>
+</html>
